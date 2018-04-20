@@ -1,0 +1,69 @@
+@media(min-width: 992px)
+{
+    .custom_nav .navbar-brand
+    {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-left: 1px solid rgb(91, 188, 86);
+        border-right: 1px solid rgb(91, 188, 86);
+        padding: 16px 40px;
+    }
+    
+    .section_heading p
+    {
+        padding: 0 150px;
+    }
+}
+
+@media(min-width: 768px) and (max-width:991px)
+{
+    .section_heading p
+    {
+        padding: 0 50px;
+    }
+}
+
+@media(max-width: 991px)
+{
+    #mynav ul li a
+    {
+        padding: 5px ;
+    }
+    
+    #mynav ul
+    {
+        margin: 7.5px 0;
+    }
+    
+    .custom_nav
+    {
+        background: rgba(0,0,0,.3);
+    }
+    
+    .about_grid h3 i
+    {
+        margin-left: 0;
+        margin-right: 8px;
+    }
+    
+    
+}
+
+@media(max-width: 768px)
+{
+    .slide_contents p
+    {
+        display: none;
+    }
+    
+    .slide_contents a
+    {
+        margin: 0 3px;
+        padding: 6px 15px;
+    }
+}
+
+
+
