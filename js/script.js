@@ -26,7 +26,48 @@ $(function()
         fade: true,
         cssEase: 'linear',
         prevArrow: '.banner_prev_arrow',
-        nextArrow: '.banner_next_arrow',
+        nextArrow: '.banner_next_arrow'
+    });
+    
+    $('.team_slide_parent').slick(
+    {
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        centerMode: true,
+        prevArrow: '.team_prev_arrow',
+        nextArrow: '.team_next_arrow',
+        centerPadding: '0px',
+        asNavFor: '.team_text_slide_inner',
+        responsive:
+        [
+            {
+                breakpoint: 992,
+                settings:
+                {
+                    slidesToShow: 3
+                }
+            }
+        ]
+    });
+    
+    $('.feedback_slides_parent').slick(
+    {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        
+    });
+    
+    $('.team_text_slide_inner').slick(
+    {
+        asNavFor: '.team_slide_parent',
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true
     });
     
     //Navbar Fix

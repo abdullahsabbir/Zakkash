@@ -48,7 +48,10 @@
         margin-right: 8px;
     }
     
-    
+    .feedback_slide p
+    {
+        padding: 0;
+    }
 }
 
 @media(max-width: 767px)
@@ -62,6 +65,16 @@
     {
         margin: 0 3px;
         padding: 6px 15px;
+    }
+    
+    .team_text_slide_inner
+    {
+        padding: 15px;
+    }
+    
+    .team_text_slide p
+    {
+        padding: 0;
     }
 }
 
