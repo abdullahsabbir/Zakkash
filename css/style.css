@@ -1171,13 +1171,13 @@ body
 
 .plans_prev_arrow
 {
-    left: 0;
+    left: 15px;
     transform: scaleX(0);
 }
 
 .plans_next_arrow
 {
-    right: 0;
+    right: 15px;
     transform: scaleX(0);
 }
 
