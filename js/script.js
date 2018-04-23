@@ -23,6 +23,7 @@ $(function()
         slidesToScroll: 1,
         dots: true,
         autoplay: true,
+        autoplaySpeed: 2500,
         fade: true,
         cssEase: 'linear',
         prevArrow: '.banner_prev_arrow',
@@ -39,6 +40,8 @@ $(function()
         nextArrow: '.team_next_arrow',
         centerPadding: '0px',
         asNavFor: '.team_text_slide_inner',
+        autoplay: true,
+        autoplaySpeed: 2500,
         responsive:
         [
             {
@@ -51,15 +54,6 @@ $(function()
         ]
     });
     
-    $('.feedback_slides_parent').slick(
-    {
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        
-    });
-    
     $('.team_text_slide_inner').slick(
     {
         asNavFor: '.team_slide_parent',
@@ -67,7 +61,50 @@ $(function()
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        fade: true
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+    });
+    
+    $('.feedback_slides_parent').slick(
+    {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+    });
+    
+    $('.plans_slides_parent').slick(
+    {
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrow: false,
+        prevArrow: '.plans_prev_arrow',
+        nextArrow: '.plans_next_arrow',
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive:
+        [
+            {
+                breakpoint: 992,
+                settings:
+                {
+                    slidesToShow: 2,
+                    arrow: true
+                }
+            },
+            {
+                breakpoint: 576,
+                settings:
+                {
+                    slidesToShow: 1,
+                    arrow: true
+                }
+            }
+        ]
     });
     
     //Navbar Fix

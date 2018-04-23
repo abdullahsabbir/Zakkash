@@ -843,6 +843,8 @@ body
 .team_slide_parent
 {
     cursor: move;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .team_slide_parent .slick-center
@@ -886,11 +888,6 @@ body
 {
     color: #353535;
     border: 1px solid #353535;
-}
-
-.team_text_slide_wrapper
-{
-    margin-top: 48px;
 }
 
 .team_text_slide_inner
@@ -1057,3 +1054,143 @@ body
 }
 
 /*   Feedback End   */
+
+/*   Plans Start   */
+
+#plans
+{
+    padding-top: 60px;
+    padding-bottom: 68px;
+    background: #f1f1f1;
+}
+
+.plans_slides_wrapper
+{
+    margin-top: 50px;
+    position: relative;
+}
+
+.plans_slide_contents
+{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: default;
+}
+
+.plans_slide_contents:hover a
+{
+    background: #37a000;
+}
+
+.plans_slide h2
+{
+    text-transform: uppercase;
+    padding: 20px 0;
+    background: #353535;
+    color: #f1f1f1;
+    font-size: 20px;
+    border-radius: 10px 10px 0 0;
+    font-weight: 700;
+}
+
+.plans_slide h3
+{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    font-size: 40px;
+    color: #37a000;
+}
+
+.plans_slide span
+{
+    font-size: 14px;
+    text-transform: capitalize;
+    position: relative;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+.plans_slide span::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 40px;
+    width: 1px;
+    border-left: 1px solid;
+    z-index: 99;
+    transform: rotate(25deg);
+}
+
+.plans_slide ul
+{
+    margin-bottom: 15px;
+}
+
+.plans_slide ul li
+{
+    display: block;
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.plans_slide a
+{
+    background: #353535;
+    color: #f1f1f1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+    border-radius: 0 0 10px 10px;
+    font-weight: 600;
+    line-height: 40px;
+    transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.plans_prev_arrow, .plans_next_arrow
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    z-index: 99;
+    border: 1px solid #37a000;
+    color: #37a000;
+    padding: 3px 10px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    cursor: pointer;
+}
+
+.plans_prev_arrow
+{
+    left: 0;
+    transform: scaleX(0);
+}
+
+.plans_next_arrow
+{
+    right: 0;
+    transform: scaleX(0);
+}
+
+#plans:hover .plans_prev_arrow, #plans:hover .plans_next_arrow
+{
+    transform: scaleX(1);
+}
+
+.plans_prev_arrow:hover, .plans_next_arrow:hover
+{
+    color: #353535;
+    border: 1px solid #353535;
+}
+
+
+/*   Plans End   */
