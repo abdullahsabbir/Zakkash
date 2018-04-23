@@ -63,6 +63,28 @@ $(function()
         $(this).addClass('work_filter_nav_active');
     });
     
+    //Progress Bar
+    
+    $('#skill_bar1').LineProgressbar(
+    {
+       percentage: 85 
+    });
+    
+    $('#skill_bar2').LineProgressbar(
+    {
+       percentage: 75 
+    });
+    
+    $('#skill_bar3').LineProgressbar(
+    {
+       percentage: 55 
+    });
+    
+    $('#skill_bar4').LineProgressbar(
+    {
+       percentage: 60
+    });
+    
     
     
 });

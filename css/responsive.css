@@ -51,7 +51,7 @@
     
 }
 
-@media(max-width: 768px)
+@media(max-width: 767px)
 {
     .slide_contents p
     {
@@ -64,6 +64,5 @@
         padding: 6px 15px;
     }
 }
-
 
 
