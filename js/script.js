@@ -107,6 +107,35 @@ $(function()
         ]
     });
     
+    $('.blog_slides_parent').slick(
+    {
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrow: true,
+        prevArrow: '.blog_prev_arrow',
+        nextArrow: '.blog_next_arrow',
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive:
+        [
+            {
+                breakpoint: 992,
+                settings:
+                {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings:
+                {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+    
     //Navbar Fix
     
     $(window).on('scroll', function()
