@@ -1,12 +1,13 @@
 $(function()
 {
+    
     "use strict";
     
     //Preloader
     
     $(window).on('load', function()
     {
-       $('.preloader').delay(1000).fadeOut('slow') ;
+       $('.preloader').delay(1000).fadeOut(1000) ;
     });
     
     //Smooth Scroll
@@ -195,7 +196,7 @@ $(function()
     
     //Counter Up
     
-    $('.about_counter_span').counterUp();
+    $('.counter_span').counterUp();
     
     //Fancybox
     
@@ -277,7 +278,5 @@ $(function()
     {
         $("html, body").animate({scrollTop : 0}, 1000);
     });
-    
-    
-    
+     
 });

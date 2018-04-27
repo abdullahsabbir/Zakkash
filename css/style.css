@@ -1,3 +1,33 @@
+/*
+
+    Template Name: Zakkash
+    Author: Abdullah Sabbir
+
+        Table of Contents
+=================================
+i.      Common Properties
+ii.     Preloader
+iii.    Modal from Video Section
+iv.     Back to Top Button
+v.      Navbar
+vi.     Banner
+vii.    About
+viii.   Counter
+ix.     Work
+x.      Services
+xi.     Skills
+xii.    Team
+xiii.   Feedback
+xiv.    Plans
+xv.     Video
+xvi.    Blog
+xvii.   Client
+xviii.  Contact
+xix.    Footer
+=================================
+
+*/
+
 *
 {
     margin: 0;
@@ -12,7 +42,6 @@ a, a:hover
 p
 {
     line-height: 24px;
-    
 }
 
 ul
@@ -38,7 +67,7 @@ body
     position: relative;
 }
 
-/*   Common Properties   */
+/*   Common Properties Start   */
 
 .section_heading
 {
@@ -88,6 +117,8 @@ body
     color: #777;
 }
 
+/*   Common Properties End   */
+
 /*   Preloader Start   */
 
 .preloader
@@ -114,7 +145,6 @@ body
     height: 300px;
     width: 300px;
 }
-
 
 /*   Preloader End   */
 
@@ -497,6 +527,10 @@ body .video_modal iframe
     background: #37a000;
 }
 
+/*   About End   */
+
+/*   Counter Start   */
+
 #counter
 {
     background: url(../images/counter_bg.jpg);
@@ -520,14 +554,14 @@ body .video_modal iframe
     left: 0;
 }
 
-.about_counter
+.counter
 {
     position: relative;
     z-index: 99;
     margin: 30px 0;
 }
 
-.about_counter i
+.counter i
 {
     display: block;
     color: #37a000;
@@ -535,7 +569,7 @@ body .video_modal iframe
     font-size: 35px;
 }
 
-.about_counter span
+.counter span
 {
     color: #f1f1f1;
     display: block;
@@ -550,7 +584,7 @@ body .video_modal iframe
     margin-bottom: 10px;
 }
 
-.about_counter p
+.counter p
 {
     display: block;
     text-transform: uppercase;
@@ -559,7 +593,7 @@ body .video_modal iframe
     color: #fff;
 }
 
-.about_counter span::after
+.counter span::after
 {
     content: '';
     height: 2px;
@@ -571,7 +605,7 @@ body .video_modal iframe
     background: #37a000;
 }
 
-/*   About End   */
+/*   Counter End   */
 
 /*   Work Start   */
 
@@ -1652,6 +1686,5 @@ body .video_modal iframe
 {
     color: #f1f1f1;
 }
-
 
 /*   Footer End   */
