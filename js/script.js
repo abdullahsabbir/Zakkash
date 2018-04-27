@@ -136,6 +136,40 @@ $(function()
         ]
     });
     
+    $('.client_slides_parent').slick(
+    {
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        arrows: false,
+        responsive:
+        [
+            {
+                breakpoint: 992,
+                settings:
+                {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 768,
+                settings:
+                {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings:
+                {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+    
     //Navbar Fix
     
     $(window).on('scroll', function()

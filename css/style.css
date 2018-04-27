@@ -1379,3 +1379,37 @@ body .video_modal iframe
 }
 
 /*   Blog End   */
+
+/*   Client Start   */
+
+#client
+{
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 68px;
+    background: url(../images/client_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#client::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 1;
+}
+
+#client .container
+{
+    position: relative;
+    z-index: 2;
+}
+
+/*   Client End   */
