@@ -87,6 +87,37 @@ body
     color: #777;
 }
 
+/*   Modal from Video Section Start   */
+
+body .video_modal
+{
+    padding: 0!important;
+}
+
+body .video_modal h4
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body .video_modal .modal-content
+{
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+body .video_modal .modal-body
+{
+    height: 80vh;
+}
+
+body .video_modal iframe
+{
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+/*   Modal from Video Section End   */
+
 /*   Navbar Start   */
 
 #mynav .active
@@ -100,6 +131,7 @@ body
     border-bottom: 1px solid rgb(91, 188, 86);
     transition: .3s;
     -webkit-transition: .3s;
+    z-index: 100;
 }
 
 .nav_arrow::after
@@ -1192,5 +1224,51 @@ body
     border: 1px solid #353535;
 }
 
-
 /*   Plans End   */
+
+/*   Video Start   */
+
+#video
+{
+    background: url(../images/video_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#video .container
+{
+    position: relative;
+    z-index: 2;
+}
+
+#video::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 1;
+}
+
+.video_icon i
+{
+    font-size: 80px;
+    color: #37a000;
+    margin: 70px 0;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.video_icon i:hover
+{
+    color: #f1f1f1;
+}
+
+/*   Video End   */
