@@ -2,6 +2,13 @@ $(function()
 {
     "use strict";
     
+    //Preloader
+    
+    $(window).on('load', function()
+    {
+       $('.preloader').delay(1000).fadeOut('slow') ;
+    });
+    
     //Smooth Scroll
     
     var mainNavHeight = $('.custom_nav').height()+16;
@@ -249,6 +256,27 @@ $(function()
         if (googleMapSelector.length) {
             google.maps.event.addDomListener(window, 'load', initialize);
         }
+    
+    //Back to Top Button
+    
+    $(window).on('scroll', function()
+    {
+       var scrollValue = $(this).scrollTop();
+        
+        if(scrollValue > 90)
+        {
+            $('.backToTop').fadeIn(1000);
+        }
+        else
+        {
+            $('.backToTop').fadeOut(1000);
+        }
+    });
+    
+    $(".backToTop").on('click', function()
+    {
+        $("html, body").animate({scrollTop : 0}, 1000);
+    });
     
     
     
