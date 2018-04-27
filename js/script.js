@@ -226,6 +226,30 @@ $(function()
        percentage: 60
     });
     
+    //Map API
+    
+    var googleMapSelector = $('#contact_map'),
+            myCenter = new google.maps.LatLng(23.734337, 90.392739);
+
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 17,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("contact_map"), mapProp);
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE,
+                icon: 'images/map_icon.png'
+            });
+            marker.setMap(map);
+        }
+        if (googleMapSelector.length) {
+            google.maps.event.addDomListener(window, 'load', initialize);
+        }
+    
     
     
 });
