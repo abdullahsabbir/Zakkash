@@ -32,10 +32,21 @@ $(function()
         dots: true,
         autoplay: true,
         autoplaySpeed: 2500,
+        arrows: true,
         fade: true,
         cssEase: 'linear',
         prevArrow: '.banner_prev_arrow',
-        nextArrow: '.banner_next_arrow'
+        nextArrow: '.banner_next_arrow',
+        responsive:
+        [
+            {
+                breakpoint: 576,
+                settings:
+                {
+                    arrows: false
+                }
+            }
+        ]
     });
     
     $('.team_slide_parent').slick(
@@ -57,6 +68,14 @@ $(function()
                 settings:
                 {
                     slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 576,
+                settings:
+                {
+                    slidesToShow: 1,
+                    arrows: false
                 }
             }
         ]
@@ -89,7 +108,7 @@ $(function()
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        arrow: false,
+        arrows: false,
         prevArrow: '.plans_prev_arrow',
         nextArrow: '.plans_next_arrow',
         autoplay: true,
@@ -101,7 +120,7 @@ $(function()
                 settings:
                 {
                     slidesToShow: 2,
-                    arrow: true
+                    arrows: true
                 }
             },
             {
@@ -109,7 +128,7 @@ $(function()
                 settings:
                 {
                     slidesToShow: 1,
-                    arrow: true
+                    arrows: true
                 }
             }
         ]
@@ -120,7 +139,7 @@ $(function()
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrow: true,
+        arrows: true,
         prevArrow: '.blog_prev_arrow',
         nextArrow: '.blog_next_arrow',
         autoplay: true,
@@ -184,12 +203,12 @@ $(function()
     {
         if($(this).scrollTop() > 0)
         {
-            $('.custom_nav').css({'background': '#353535'});
+            $('.custom_nav').css({'background': 'rgba(0,0,0,.8)'});
             $('.custom_nav').addClass('nav_arrow');
         }
         else
         {
-              $('.custom_nav').css({'background': 'transparent'});
+              $('.custom_nav').css({'background': 'rgba(0,0,0,.5)'});
               $('.custom_nav').removeClass('nav_arrow');
         }
     });

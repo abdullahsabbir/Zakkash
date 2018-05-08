@@ -223,7 +223,7 @@ body .video_modal iframe
 
 .custom_nav
 {
-    background: transparent;
+    background: rgba(0,0,0,.5);
     border-bottom: 1px solid rgb(91, 188, 86);
     transition: .3s;
     -webkit-transition: .3s;
@@ -455,7 +455,8 @@ body .video_modal iframe
 
 #about
 {
-    padding: 60px 68px;
+    padding-top: 60px;
+    padding-bottom: 68px;
 }
 
 .about_grid
@@ -693,7 +694,7 @@ body .video_modal iframe
     font-size: 25px;
     font-weight: 500;
     display: block;
-    transform: translateY(-200%);
+    transform: translateY(-150%);
     opacity: 0;
     transition: .3s;
     -webkit-transition: .3s;
@@ -714,7 +715,7 @@ body .video_modal iframe
 .work_filter_image_hover_captions a
 {
     display: inline-block;
-    transform: translateY(200%);
+    transform: translateY(150%);
     opacity: 0;
     transition: .3s;
     -webkit-transition: .3s;

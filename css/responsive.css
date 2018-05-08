@@ -39,7 +39,7 @@
     
     .custom_nav
     {
-        background: rgba(0,0,0,.3);
+        background: rgba(0,0,0,.5);
     }
     
     .about_grid h3 i
@@ -80,5 +80,21 @@
     .footer_numbers
     {
         margin: 40px 0;
+    }
+}
+
+@media(max-width: 575px)
+{
+    .banner_prev_arrow, .banner_next_arrow, .team_prev_arrow, .team_next_arrow
+    {
+        display: none;
+    }
+}
+
+@media(min-width: 450px) and (max-width: 575px)
+{
+    .team_slide img
+    {
+        padding: 0 60px;
     }
 }
