@@ -3,18 +3,41 @@ $(function()
     
     "use strict";
     
+    var $window = $(window);
+    var $document = $(document);
+    
     //Preloader
     
-    $(window).on('load', function()
+    $window.on('load', function()
     {
-       $('.preloader').delay(1000).fadeOut(1000) ;
+        $('.preloader').delay(1000).fadeOut(1000);
+        
+        bar1.LineProgressbar(
+        {
+           percentage: 0
+        });
+
+        bar2.LineProgressbar(
+        {
+           percentage: 0
+        });
+
+        bar3.LineProgressbar(
+        {
+           percentage: 0
+        });
+
+        bar4.LineProgressbar(
+        {
+           percentage: 0
+        });
     });
     
     //Smooth Scroll
     
     var mainNavHeight = $('.custom_nav').height()+16;
     
-    $(document).on('click', 'a[href^="#"]:not([data-toggle])', function (event) {
+    $document.on('click', 'a[href^="#"]:not([data-toggle])', function (event) {
     event.preventDefault();
 
     $('html, body').animate({
@@ -108,7 +131,6 @@ $(function()
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        arrows: false,
         prevArrow: '.plans_prev_arrow',
         nextArrow: '.plans_next_arrow',
         autoplay: true,
@@ -197,10 +219,10 @@ $(function()
         ]
     });
     
-    //Navbar Fix
-    
-    $(window).on('scroll', function()
+    $window.on('scroll', function()
     {
+        //Navbar Fix
+        
         if($(this).scrollTop() > 0)
         {
             $('.custom_nav').css({'background': 'rgba(0,0,0,.8)'});
@@ -211,6 +233,26 @@ $(function()
               $('.custom_nav').css({'background': 'rgba(0,0,0,.5)'});
               $('.custom_nav').removeClass('nav_arrow');
         }
+        
+        //Back to Top Button Fix
+        
+        var scrollValue = $(this).scrollTop();
+        
+        if(scrollValue > 90)
+        {
+            $('.backToTop').fadeIn(1000);
+        }
+        else
+        {
+            $('.backToTop').fadeOut(1000);
+        }
+    });
+    
+    //Back to Top Button Click Event
+    
+    $(".backToTop").on('click', function()
+    {
+        $("html, body").animate({scrollTop : 0}, 1000);
     });
     
     //Counter Up
@@ -233,25 +275,39 @@ $(function()
     
     //Progress Bar
     
-    $('#skill_bar1').LineProgressbar(
-    {
-       percentage: 85 
-    });
+    var bar1 = $('#skill_bar1');
+    var bar2 = $('#skill_bar2');
+    var bar3 = $('#skill_bar3');
+    var bar4 = $('#skill_bar4');
     
-    $('#skill_bar2').LineProgressbar(
+    $('.skill_progress_parent').waypoint(function(direction)
     {
-       percentage: 75 
-    });
-    
-    $('#skill_bar3').LineProgressbar(
-    {
-       percentage: 55 
-    });
-    
-    $('#skill_bar4').LineProgressbar(
-    {
-       percentage: 60
-    });
+        if(direction == 'down')
+        {
+            bar1.LineProgressbar(
+            {
+               percentage: 85 
+            });
+
+            bar2.LineProgressbar(
+            {
+               percentage: 75 
+            });
+
+            bar3.LineProgressbar(
+            {
+               percentage: 55 
+            });
+
+            bar4.LineProgressbar(
+            {
+               percentage: 60
+            });
+        }
+        
+        this.destroy();
+        
+    }, {offset: '75%'});
     
     //Map API
     
@@ -277,25 +333,4 @@ $(function()
             google.maps.event.addDomListener(window, 'load', initialize);
         }
     
-    //Back to Top Button
-    
-    $(window).on('scroll', function()
-    {
-       var scrollValue = $(this).scrollTop();
-        
-        if(scrollValue > 90)
-        {
-            $('.backToTop').fadeIn(1000);
-        }
-        else
-        {
-            $('.backToTop').fadeOut(1000);
-        }
-    });
-    
-    $(".backToTop").on('click', function()
-    {
-        $("html, body").animate({scrollTop : 0}, 1000);
-    });
-     
 });
